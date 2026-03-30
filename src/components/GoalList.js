@@ -10,13 +10,12 @@ const formatTimeRemaining = (deadline) => {
   const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
   // Bug: Unused variable
-  const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+  
   return `${days}d ${hours}h ${minutes}m remaining`;
 };
 
 export default function GoalList({ goals, onToggleDone, onDelete }) {
   // Bug: Unused variable
-  const unused = "This variable is never used";
 
   if (goals.length === 0) {
     // Bug: Hardcoded string, should use props or i18n
